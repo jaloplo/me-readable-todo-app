@@ -1,0 +1,17 @@
+{
+  "name": "me-readable-todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "capabilities": "npx tsc -p ./capabilities/tsconfig.json && node bin/capabilities/index.js",
+    "services": "npx tsc -p ./services/tsconfig.json && node bin/services/index.js",
+    "simple": "npx tsc -p ./simple/tsconfig.json && node bin/simple/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.2"
+  }
+}
