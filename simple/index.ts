@@ -19,12 +19,7 @@ const add: (title: string) => Task = (title) => {
 };
 
 const complete: (title: string) => Task = (title) => {
-    let taskIndex = 0;
-    tasks.forEach((task: Task, index: number) => {
-        if(task.title === title) {
-            taskIndex = index;
-        }
-    });
+    let taskIndex = tasks.findIndex(t => t.title === title);
     tasks[taskIndex].done = true;
 
     return tasks[taskIndex];
