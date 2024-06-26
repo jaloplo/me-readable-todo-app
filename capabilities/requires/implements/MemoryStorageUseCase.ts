@@ -24,12 +24,7 @@ const MemoryStorageUseCase: MemoryStorageUseCaseCreator = () => {
         },
         
         patch: (oldTask, newTask) => {
-            let taskIndex = 0;
-            tasks.forEach((task: TaskModel, index: number) => {
-                if(task.title === oldTask.title) {
-                    taskIndex = index;
-                }
-            });
+            let taskIndex = tasks.findIndex(t => t.title === oldTask.title);
 
             const patchedTask = Object.assign({ title: oldTask.title }, newTask);
             
